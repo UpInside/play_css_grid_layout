@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UpInside Play CSS GRID Layout</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            max-width: 1366px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 350px 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        .logo{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 20px;
+        }
+
+        .menu{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 20px;
+            text-align: right;
+            display: grid;
+            align-items: center;
+        }
+
+        .menu ul{
+            list-style: none;
+        }
+
+        ul li{
+            display: inline-block;
+        }
+
+        li a{
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        li a:hover{
+            background: rgba(0,0,0,0.05);
+            color: #008EC0;
+        }
+
+        .content{
+            grid-column: 1/4;
+            grid-row: 2/3;
+            background: #666;
+            min-height: 200px;
+        }
+
+        .sidebar{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            background: #333;
+        }
+
+        .footer{
+            grid-column: 1/5;
+            grid-row: 3/4;
+            background: #CCC;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <img src="_img/logo.png" width="310" border="0">
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Play</a></li>
+            <li><a href="#">Empresa</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <p>Conteúdo</p>
+    </div>
+
+    <div class="sidebar">
+        <p>Sidebar</p>
+    </div>
+
+    <div class="footer">
+        <p>Rodapé</p>
+    </div>
+
+</div>
+
+</body>
+</html>
